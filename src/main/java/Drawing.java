@@ -15,6 +15,16 @@ public class Drawing extends Canvas {
         circle = new Circle(p,c,50);
         Point p1=new Point(50,50);
         rect = new Rectangle(50,100,p1,c);
+        setupFrame();
+        setupCanvas();
+    }
+
+    private void setupCanvas() {
+        setBackground(Color.WHITE); // Sets the Canvas background
+        setSize(400, 400); // Sets the Canvas size to be the same as the frame
+    }
+
+    private void setupFrame() {
         f = new Frame("My window"); // Instantiates the Frame
         f.add(this); // Adds the Canvas to the Frame
         f.setLayout(null); // Stops the frame from trying to layout contents
@@ -25,9 +35,8 @@ public class Drawing extends Canvas {
                 f.dispose();
             }
         });
-        setBackground(Color.WHITE); // Sets the Canvas background
-        setSize(400, 400); // Sets the Canvas size to be the same as the frame
     }
+
     public void paint(Graphics g){
         circle.draw(g);
         rect.draw(g);
