@@ -10,6 +10,7 @@ public class Drawing extends Canvas {
     private Frame f;
     private Circle circle;
     private Rectangle rect;
+    private Square square;
 
     // The constructor
     public Drawing() {
@@ -18,6 +19,8 @@ public class Drawing extends Canvas {
         circle = new Circle(p,c,50);
         Point p1=new Point(50,50);
         rect = new Rectangle(50,100,p1,c);
+        Point p2=new Point(400,400);
+        square = new Square(50,p2,c);
         setupFrame();
         setupCanvas();
     }
@@ -43,5 +46,6 @@ public class Drawing extends Canvas {
     public void paint(Graphics g){
         circle.draw(g);
         rect.draw(g);
+        square.draw(g);
     }
 }
