@@ -1,6 +1,9 @@
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import Shape.Circle;
+import Shape.Rectangle;
+import Shape.Square;
 
 public class Drawing extends Canvas {
     // A private field called f of class Frame. This is also in the AWT.
@@ -11,7 +14,7 @@ public class Drawing extends Canvas {
     // The constructor
     public Drawing() {
         Point p=new Point(200,200);
-        Color c=new Color(0x846263);// The RGB number comprises three bytes: red, green and blue
+        Color c=new Color(0x223344);// The RGB number comprises three bytes: red, green and blue
         circle = new Circle(p,c,50);
         Point p1=new Point(50,50);
         rect = new Rectangle(50,100,p1,c);
